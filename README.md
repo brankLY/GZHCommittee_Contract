@@ -1,8 +1,8 @@
 This is a special purpose vehicle project.
 
-# contract_SPV
+# Hermes
 
-contract_SPV is a spv chaincode for blockchain token and member management.
+Hermes is a spv chaincode for blockchain token and member management.
 
 ## Currently support
 
@@ -16,11 +16,11 @@ contract_SPV is a spv chaincode for blockchain token and member management.
 
 # 数值计算说明
 
-contract_SPV项目的数值计算采用[mathjs](http://mathjs.org/)
+Hermes项目的数值计算采用[mathjs](http://mathjs.org/)
 
 # Lint
 
-contract_SPV项目代码质量采用著名的[airbnb/javascript](https://github.com/airbnb/javascript)标准
+Hermes项目代码质量采用著名的[airbnb/javascript](https://github.com/airbnb/javascript)标准
 
 ```
 yarn lint # 对lib文件夹中的内容做静态检查
@@ -35,7 +35,7 @@ yarn test # 使用mocha运行单元测试
 # Folder Structure
 
 ```
-contract_SPV
+Hermes
   |
   \index.js # 入口文件，负责请求的分发
   \package.json # node项目文件, npm start会执行node index.js
