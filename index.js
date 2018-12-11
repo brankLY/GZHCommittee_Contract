@@ -4,7 +4,7 @@ const shim = require('fabric-shim');
 const logger = require('./lib/utils/Logger').getLogger('GZHCOMMITTEE:index.js');
 const Response = require('./lib/utils/Response');
 
-const CommitteeHandler = require('./lib/handler/CommitteeHandler');
+const SPVHandler = require('./lib/handler/SPVHandler');
 const MemberHandler = require('./lib/handler/MemberHandler');
 const ProposalHandler = require('./lib/handler/ProposalHandler');
 
@@ -27,8 +27,8 @@ class Chaincode {
     } = stub.getFunctionAndParameters();
     logger.debug('Invoke with fcn:%s and params:%j', fcn, params);
     switch (fcn) {
-      case 'committee.init':
-        return CommitteeHandler.Init(stub, params);
+      case 'spv.create':
+        return SPVHandler.Create(stub, params);
       case 'member.init':
         return MemberHandler.Init(stub, params);
       case 'member.getall':
